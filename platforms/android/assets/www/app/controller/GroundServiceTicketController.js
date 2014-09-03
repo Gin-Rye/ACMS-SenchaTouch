@@ -48,32 +48,29 @@ Ext.define('acms.controller.GroundServiceTicketController', {
         			this.getGroundServiceTicket().destroy();
         		}
         	},
-        	'groundServiceTicket #saveButtonId': {
+        	'groundServiceTicket #printerButtonId': {
         		tap: function() {
-        			function downloadFile() {
-		        		/*var fileTransfer = new FileTransfer();
-						var uri = encodeURI("http://10.1.39.84:8888/phonegap/MIAGFIYR.pdf");
-						var localFilePath = "/sdcard/download/MIAGFIYR.pdf";
+        			var remote = "http://10.1.39.84:8888/phonegap/test.pdf";
+        			var local = "/sdcard/download/test.pdf";
+        			
+        			function downloadAndPrint(remoteFileUri, localFilePath) {
+		        		var fileTransfer = new FileTransfer();
+						var uri = encodeURI(remoteFileUri);
 						
 						fileTransfer.download(
 						    uri,
 						    localFilePath,
 						    function(entry) {
-						        Ext.Msg.alert("", "下载成功!");
+						    	alert("下载文件成功");
+						        navigator.PrinterShare.print(localFilePath);
 						    },
 						    function(error) {
-						    	alert("失败：" + JSON.stringify(error));
+						    	alert("下载文件失败：" + JSON.stringify(error));
 						    },
 						    true
-						);*/
-        				alert("打印暂不支持");
+						);
 					}
-        			downloadFile();
-        		}
-        	},
-        	'groundServiceTicket #printerButtonId': {
-        		tap: function() {
-        			
+        			downloadAndPrint(remote, local);
         		}
         	},
         	'groundServiceTicketGrid': {

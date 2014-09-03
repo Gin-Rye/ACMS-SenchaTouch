@@ -159,13 +159,21 @@ module.exports = [
         "clobbers": [
             "window.FileTransfer"
         ]
+    },
+    {
+        "file": "plugins/com.travelsky.cordova.print/www/PrinterShare.js",
+        "id": "com.travelsky.cordova.print.PrinterShare",
+        "merges": [
+            "navigator.PrinterShare"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "org.apache.cordova.file": "1.3.1-dev",
-    "org.apache.cordova.file-transfer": "0.4.6-dev"
+    "org.apache.cordova.file-transfer": "0.4.6-dev",
+    "com.travelsky.cordova.print": "0.0.1"
 }
 // BOTTOM OF METADATA
 });

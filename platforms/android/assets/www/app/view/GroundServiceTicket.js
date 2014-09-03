@@ -139,18 +139,12 @@ Ext.define('acms.view.GroundServiceTicket', {
         		xtype: 'spacer'
         	}, {
         		xtype: 'button',
-        		id: 'saveButtonId',
-        		width: 50,
-        		height: 40,
-        		style: 'background-image: url(./icons/save.ico);background-repeat:no-repeat; background-size:30px; background-position: center;'
-        	}, {
-        		xtype: 'spacer'
-        	}, {
-        		xtype: 'button',
         		id: 'printerButtonId',
         		width: 50,
         		height: 40,
         		style: 'background-image: url(./icons/printer.ico);background-repeat:no-repeat; background-size:30px; background-position: center;'
+        	}, {
+        		xtype: 'spacer'
         	}]
         }]
     },
